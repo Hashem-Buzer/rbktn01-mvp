@@ -19,9 +19,14 @@ body {
 }
 
 input {
+  text-indent: 10px;
+
+  outline: none;
   border-radius: 20px;
 }
 textarea {
+  text-indent: 10px;
+  outline: none;
   border-radius: 20px;
 }
 
