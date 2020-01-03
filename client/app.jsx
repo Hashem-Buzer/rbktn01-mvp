@@ -46,7 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="mainDiv">
-        <form onSubmit={this.submit}>
+        <form id="form" onSubmit={this.submit}>
           <label id="name">
             Name: <br />
             <input
@@ -78,9 +78,12 @@ class App extends React.Component {
         <div>
           <div>
             {this.state.data.map((element, i) => (
-              <div key={i}>
-                <div id="name">{element.name}</div>
-                <div id="blog">{element.blog}</div>
+              <div id="blogDiv" key={i}>
+                <div id="userName">@{element.name}</div>
+                <div id="userBlog" style={{ textAlign: "center" }}>
+                  <br />
+                  {element.blog}
+                </div>
               </div>
             ))}
           </div>

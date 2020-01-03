@@ -15,16 +15,16 @@ app.post("/postData", (req, res) => {
   user.findOne({ name: req.body.name }, (err, found) => {
     // console.log("\n" + err);
     if (err) throw err;
-    else if (found) {
-      found["blog"].push(req.body.blog);
-      found.save();
-      console.log(found);
-    } else {
-      user.create(req.body, data => {
-        // console.log(data);
-        res.send(data);
-      });
-    }
+    // else if (found) {
+    //   found["blog"].push(req.body.blog);
+    //   found.save();
+    //   console.log(found);
+    // } else {
+    user.create(req.body, data => {
+      // console.log(data);
+      res.send(data);
+    });
+    // }
   });
 });
 
