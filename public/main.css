@@ -65,4 +65,14 @@ button {
 #userName {
   color: black;
   font-weight: bold;
+  font-size: 25px;
+}
+
+.eachBlog {
+  background-color: #e7e5e4;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #557788;
+  padding: 15px;
 }

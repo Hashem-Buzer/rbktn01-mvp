@@ -82,7 +82,13 @@ class App extends React.Component {
                 <div id="userName">@{element.name}</div>
                 <div id="userBlog" style={{ textAlign: "center" }}>
                   <br />
-                  {element.blog}
+                  {element.blog.length > 1 ? (
+                    element.blog.map((b, i) => {
+                      return <div className="eachBlog">{b}</div>;
+                    })
+                  ) : (
+                    <div className="eachBlog"> {element.blog} </div>
+                  )}
                 </div>
               </div>
             ))}
